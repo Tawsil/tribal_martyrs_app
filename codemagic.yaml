@@ -1,0 +1,30 @@
+workflows:
+  android-apk:
+    name: Build Android APK
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get dependencies
+        script: flutter pub get
+      - name: Build release APK
+        script: |
+          flutter build apk \
+            --release \
+            --no-shrink \
+            --target-platform=android-arm64
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com  # ← غيّر هذا إلى بريدك
+
+  web-deploy:
+    name: Build and Deploy Web
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter build web --release
+    artifacts:
+      - build/web

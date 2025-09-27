@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // السماح للمستخدمين بقراءة البيانات العامة
+    match /{category}/{docId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+    }
+
+    // فقط المسؤول يمكنه تعديل الإعدادات
+    match /app_settings/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /form_fields/{category}/fields/{field} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    function isAdmin() {
+      return request.auth != null && 
+             request.auth.token.admin == true;
+    }
+  }
+}
