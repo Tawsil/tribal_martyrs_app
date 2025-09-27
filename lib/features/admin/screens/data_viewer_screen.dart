@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tribal_martyrs_app/shared/widgets/search_bar.dart';
+import 'package:tribal_martyrs_app/shared/widgets/search_bar.dart'; // يحتوي الآن على CustomSearchBar
 
 class DataViewerScreen extends StatefulWidget {
   final String category;
@@ -26,7 +26,7 @@ class _DataViewerScreenState extends State<DataViewerScreen> {
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: SearchBar(
+          child: CustomSearchBar( // ← تم التغيير هنا
             controller: _searchController,
             onSearch: (query) {
               setState(() {
