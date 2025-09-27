@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
+import 'dart:io'; // ← أُضيف هذا السطر
 
 class FilePickerWidget extends StatefulWidget {
   final String category;
@@ -30,7 +31,8 @@ class _FilePickerWidgetState extends State<FilePickerWidget> {
         .child(widget.docId)
         .child('document.jpg');
 
-    final task = ref.putFile(image.path);
+    final file = File(image.path); // ← تم إنشاء كائن File
+    final task = ref.putFile(file); // ← تم التمرير كـ File
     await task;
 
     final url = await ref.getDownloadURL();
