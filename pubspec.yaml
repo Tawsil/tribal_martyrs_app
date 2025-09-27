@@ -26,7 +26,7 @@ dependencies:
 
   # UI & Media
   flutter_svg: ^2.0.7
-  intl: ^0.18.1
+  intl: ^0.20.2
   image_picker: ^0.8.9  # ← أُضيفت كما طلبت
 
 dev_dependencies:
