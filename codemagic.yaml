@@ -17,7 +17,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - your-email@example.com  # ← غيّر هذا إلى بريدك
+          - your-email@example.com  # ← غيّر هذا إلى بريدك الحقيقي
 
   web-deploy:
     name: Build and Deploy Web
