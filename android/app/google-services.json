@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1005494215127",
+    "project_id": "tribal-martyrs-app",
+    "storage_bucket": "tribal-martyrs-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005494215127:android:ca6a8c542bec85045e2b92",
+        "android_client_info": {
+          "package_name": "com.example.tribal_martyrs_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRyX3dMGWUZpFGDyNvU2S6N_-LnGpFmRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
