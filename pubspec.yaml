@@ -5,46 +5,44 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_localizations:
-    sdk: flutter
+  dependencies:
+    flutter:
+        sdk: flutter
+          flutter_localizations:
+              sdk: flutter
 
-  # Firebase
-  firebase_core: ^2.24.0
-  cloud_firestore: ^4.13.0
-  firebase_auth: ^4.16.0
-  firebase_storage: ^11.6.0
+                # Firebase
+                  firebase_core: ^2.24.0
+                    cloud_firestore: ^4.13.0
+                      firebase_auth: ^4.16.0
+                        firebase_storage: ^11.6.0
 
-  # State Management
-  flutter_riverpod: ^2.4.9
+                          # State Management
+                            flutter_riverpod: ^2.4.9
 
-  # Local Storage
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
+                              # Local Storage
+                                hive: ^2.2.3
+                                  hive_flutter: ^1.1.0
 
-  # UI & Media
-  flutter_svg: ^2.0.7
-  intl: ^0.20.2
-  image_picker: ^0.8.9  # ← أُضيفت كما طلبت
+                                    # UI & Media
+                                      flutter_svg: ^2.0.7
+                                        intl: ^0.20.2
+                                          image_picker: ^0.8.9
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.0
+                                          dev_dependencies:
+                                            flutter_test:
+                                                sdk: flutter
+                                                  flutter_lints: ^3.0.0
 
-flutter:
-  uses-material-design: true
-  generate: true
+                                                  flutter:
+                                                    uses-material-design: true
 
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/fonts/
+                                                      assets:
+                                                          - assets/images/
+                                                              - assets/icons/
 
-  # دعم اللغة العربية (RTL) مع خط وطني
-  fonts:
-    - family: Cairo
-      fonts:
-        - asset: assets/fonts/Cairo-Regular.ttf
+                                                                # ✅ تم تعطيل الخط الخارجي — نستخدم الخط الافتراضي مع دعم RTL
+                                                                  # fonts:
+                                                                    #   - family: Cairo
+                                                                      #     fonts:
+                                                                        #       - asset: assets/fonts/Cairo-Regular.ttf
